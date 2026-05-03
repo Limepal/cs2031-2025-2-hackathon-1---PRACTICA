@@ -1,0 +1,7 @@
+package utec.hack1.exceptional;
+
+public class NotFoundException extends RuntimeException {
+    public NotFoundException(String message){
+        super(message);
+    }
+}
