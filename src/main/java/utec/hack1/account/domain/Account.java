@@ -1,4 +1,4 @@
-package org.test.week06lab01.account.domain;
+package utec.hack1.account.domain;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;

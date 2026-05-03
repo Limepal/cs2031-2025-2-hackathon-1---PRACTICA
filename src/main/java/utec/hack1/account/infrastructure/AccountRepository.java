@@ -1,7 +1,7 @@
-package org.test.week06lab01.account.infrastructure;
+package utec.hack1.account.infrastructure;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.test.week06lab01.account.domain.Account;
+import utec.hack1.account.domain.Account;
 
 import java.util.Optional;
 

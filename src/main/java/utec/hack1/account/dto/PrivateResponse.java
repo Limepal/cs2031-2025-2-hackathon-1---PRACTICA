@@ -1,4 +1,4 @@
-package org.test.week06lab01.account.dto;
+package utec.hack1.account.dto;
 
 public class PrivateResponse {
     private String password;

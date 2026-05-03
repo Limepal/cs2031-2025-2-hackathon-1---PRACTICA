@@ -1,10 +1,10 @@
-package org.test.week06lab01.account.domain;
+package utec.hack1.account.domain;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.test.week06lab01.account.infrastructure.AccountRepository;
+import utec.hack1.account.infrastructure.AccountRepository;
 
 @Service
 public class AccountService implements UserDetailsService {

@@ -1,15 +1,15 @@
-package org.test.week06lab01.auth.domain;
+package utec.hack1.auth.domain;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.test.week06lab01.account.domain.Account;
-import org.test.week06lab01.account.domain.Role;
-import org.test.week06lab01.account.infrastructure.AccountRepository;
-import org.test.week06lab01.auth.components.JwtService;
-import org.test.week06lab01.auth.dto.SignUpRequest;
-import org.test.week06lab01.auth.dto.TokenResponse;
+import utec.hack1.account.domain.Account;
+import utec.hack1.account.domain.Role;
+import utec.hack1.account.infrastructure.AccountRepository;
+import utec.hack1.auth.components.JwtService;
+import utec.hack1.auth.dto.SignUpRequest;
+import utec.hack1.auth.dto.TokenResponse;
 
 @Service
 public class AuthService {

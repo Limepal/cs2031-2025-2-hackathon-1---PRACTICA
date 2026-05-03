@@ -1,4 +1,4 @@
-package org.test.week06lab01.config;
+package utec.hack1.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,8 +15,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.test.week06lab01.account.domain.AccountService;
-import org.test.week06lab01.auth.components.JwtAuthorizationFilter;
+import utec.hack1.account.domain.AccountService;
+import utec.hack1.auth.components.JwtAuthorizationFilter;
 
 import java.util.List;
 

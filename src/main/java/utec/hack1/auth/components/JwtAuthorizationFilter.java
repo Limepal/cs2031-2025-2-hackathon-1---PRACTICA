@@ -1,4 +1,4 @@
-package org.test.week06lab01.auth.components;
+package utec.hack1.auth.components;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -12,7 +12,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
-import org.test.week06lab01.account.domain.AccountService;
+import utec.hack1.account.domain.AccountService;
 
 import java.io.IOException;
 

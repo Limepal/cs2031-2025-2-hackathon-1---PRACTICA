@@ -1,14 +1,14 @@
-package org.test.week06lab01.auth.application;
+package utec.hack1.auth.application;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.test.week06lab01.auth.domain.AuthService;
-import org.test.week06lab01.auth.dto.SignInRequest;
-import org.test.week06lab01.auth.dto.SignUpRequest;
-import org.test.week06lab01.auth.dto.TokenResponse;
+import utec.hack1.auth.domain.AuthService;
+import utec.hack1.auth.dto.SignInRequest;
+import utec.hack1.auth.dto.SignUpRequest;
+import utec.hack1.auth.dto.TokenResponse;
 
 @RestController
 @RequestMapping("/auth")

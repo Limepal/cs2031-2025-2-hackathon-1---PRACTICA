@@ -1,4 +1,4 @@
-package org.test.week06lab01.auth.components;
+package utec.hack1.auth.components;
 
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;

@@ -1,4 +1,4 @@
-package org.test.week06lab01.account.domain;
+package utec.hack1.account.domain;
 
 // se pone fuera d ela clase domonio para hacer la arquitecturs escalable
 public enum Role {

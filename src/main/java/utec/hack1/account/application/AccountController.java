@@ -1,14 +1,14 @@
-package org.test.week06lab01.account.application;
+package utec.hack1.account.application;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-import org.test.week06lab01.account.domain.Account;
-import org.test.week06lab01.account.domain.AccountService;
-import org.test.week06lab01.account.dto.UpdateUserDto;
-import org.test.week06lab01.auth.dto.UserInfoDto;
+import utec.hack1.account.domain.Account;
+import utec.hack1.account.domain.AccountService;
+import utec.hack1.account.dto.UpdateUserDto;
+import utec.hack1.auth.dto.UserInfoDto;
 
 import java.security.Principal;
 

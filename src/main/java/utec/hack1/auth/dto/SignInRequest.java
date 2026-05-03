@@ -1,4 +1,4 @@
-package org.test.week06lab01.auth.dto;
+package utec.hack1.auth.dto;
 
 public class SignInRequest {
     private String email;
