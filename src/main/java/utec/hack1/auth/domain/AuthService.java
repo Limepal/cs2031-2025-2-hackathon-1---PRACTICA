@@ -30,9 +30,9 @@ public class AuthService {
                 new Account(
                         request.getEmail(),
                         passwordEncoder.encode(request.getPassword()),
-                        request.getFirstName(),
-                        request.getLastName(),
-                        Role.ROLE_USER
+                        request.getUsername(),
+                        request.getBranch(),
+                        Role.ROLE_CENTRAL
                 )
         );
         var token = jwtService.generateToken(account);

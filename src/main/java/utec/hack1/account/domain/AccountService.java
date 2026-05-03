@@ -21,12 +21,11 @@ public class AccountService implements UserDetailsService {
                 .orElseThrow();
     }
 
-    public Account updateUser(Long id, String firstName, String
-            lastName) {
+    public Account updateUser(Long id, String username, String branch) {
         Account account = accountRepository.findById(id)
                 .orElseThrow();
-        account.setFirstName(firstName);
-        account.setLastName(lastName);
+        account.setUsername(username);
+        account.setBranch(branch);
         return accountRepository.save(account);
     }
 

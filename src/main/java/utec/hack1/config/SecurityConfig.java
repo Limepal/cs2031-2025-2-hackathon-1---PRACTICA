@@ -2,6 +2,7 @@ package utec.hack1.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.ProviderManager;
@@ -56,24 +57,34 @@ public class SecurityConfig {
         return new ProviderManager(List.of(authenticationProvider()));
     }
 
-
     @Bean
+    @Order(1)
+    public SecurityFilterChain h2ConsoleSecurityFilterChain(HttpSecurity http) throws Exception {
+        http
+                .securityMatcher(request -> request.getServletPath().startsWith("/h2-console")) // 👈 FIX REAL
+                .csrf(csrf -> csrf.disable())
+                .headers(headers -> headers.frameOptions(frame -> frame.disable()))
+                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
+
+        return http.build();
+    }
+    @Bean
+    @Order(2)
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
-                .sessionManagement(
-                        manager -> manager.sessionCreationPolicy(STATELESS)
-                )
-                .headers(headers->headers.frameOptions(frame-> frame.disable()))// solo para activar el menu la consola de h2
+                .sessionManagement(manager -> manager.sessionCreationPolicy(STATELESS))
+                .headers(headers -> headers.frameOptions(frame -> frame.disable()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/h2-console/**").permitAll()//signifca que cualquie rpeticin que le mande ala consola aca aprecera
                         .requestMatchers("/auth/**").permitAll()
-                        .requestMatchers("/auth/private").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.PUT, "/accounts/**").hasRole("ADMIN")
-                        .anyRequest().authenticated() //autorizasiones HTTP
+                        .requestMatchers("/auth/private").hasRole("BRANCH")
+                        .requestMatchers(HttpMethod.PUT, "/accounts/**").hasRole("CENTRAL")
+                        .anyRequest().authenticated()
                 )
                 .authenticationProvider(authenticationProvider())
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
+
+
 }

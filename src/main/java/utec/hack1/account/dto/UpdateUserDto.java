@@ -1,12 +1,12 @@
 package utec.hack1.account.dto;
 
 public class UpdateUserDto {
-    private String firstName;
-    private String lastName;
-    public String getFirstName() {
-        return firstName;
+    private String username;
+    private String branch;
+    public String getUsername() {
+        return username;
     }
-    public String getLastName() {
-        return lastName;
+    public String getBranch() {
+        return branch;
     }
 }

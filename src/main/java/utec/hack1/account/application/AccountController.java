@@ -35,8 +35,8 @@ public class AccountController {
     ) {
         Account updated = accountService.updateUser(
                 id,
-                request.getFirstName(),
-                request.getLastName()
+                request.getUsername(),
+                request.getBranch()
         );
         return ResponseEntity.ok(new UserInfoDto(updated.getUsername()));
     }

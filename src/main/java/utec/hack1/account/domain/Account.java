@@ -15,23 +15,23 @@ public class Account implements UserDetails {
     private Long id;
 
     @Column(unique=true)
-    private String email;
+    private String username;
     private String password;
 
     @Enumerated(EnumType.STRING)
     private Role role;
 
 
-    private String firstName;
-    private String lastName;
+    private String email;
+    private String branch;
 
     public Account(){}
 
-    public Account(String email, String password, String firstName, String lastName, Role role) {
+    public Account(String email, String password, String username, String branch, Role role) {
         this.email = email;
         this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.username = username;
+        this.branch= branch;
         this.role = role;
 
     }
@@ -79,19 +79,15 @@ public class Account implements UserDetails {
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getBranch() {
+        return branch;
     }
 
-    public void setFirstName(String name) {
-        this.firstName = name;
+    public void setBranch(String branch) {
+        this.branch = branch;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

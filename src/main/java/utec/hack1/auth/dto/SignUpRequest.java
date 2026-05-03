@@ -1,35 +1,35 @@
 package utec.hack1.auth.dto;
 
 public class SignUpRequest {
-    private String firstName;
-    private String lastName;
+    private String username;
+    private String branch;
     private String email;
     private String password;
 
     public SignUpRequest() {
     }
 
-    public SignUpRequest(String firstName, String lastName, String email, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public SignUpRequest(String username, String branch, String email, String password) {
+        this.username = username;
+        this.branch = branch;
         this.email = email;
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getBranch() {
+        return branch;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setBranch(String branch) {
+        this.branch = branch;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
